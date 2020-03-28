@@ -1,4 +1,4 @@
 const assert = require("assert");
-const myModule = require("..");
+const myModule = require("../src");
 assert.equal(myModule.add(1, 2), 3);
 console.log("ok");

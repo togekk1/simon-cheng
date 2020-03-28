@@ -13,8 +13,9 @@
     "typescript": "^3.8.3"
   },
   "scripts": {
-    "asbuild": "asc assembly/index.ts -O3 -b dist/optimized.wasm --validate --sourceMap",
-    "start": "yarn asbuild && parcel index.html",
+    "asbuild": "asc assembly/index.ts -O3 -b dist/index.wasm --validate",
+    "asbuild_dev": "asc assembly/index.ts -b dist/index.wasm --validate --sourceMap",
+    "start": "yarn asbuild && parcel src/index.html",
     "test": "node tests"
   },
   "dependencies": {
