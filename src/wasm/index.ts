@@ -37,7 +37,6 @@ export default class wasm {
             }
         }) as wasm_type;
 
-
         this.main = main;
         this.get_string = __getString;
         this.alloc_string = __allocString;

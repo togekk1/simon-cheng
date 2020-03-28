@@ -1,5 +1,6 @@
 import wasm from './wasm';
 import home from './pages/home/home';
+import 'bulma'
 
 class app {
     wasm: wasm = new wasm();
