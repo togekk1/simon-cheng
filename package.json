@@ -6,15 +6,17 @@
   "author": "togekk <togekk@gmail.com>",
   "license": "MIT",
   "devDependencies": {
+    "@parcel/core": "^2.0.0-alpha.3",
     "assemblyScript": "https://github.com/AssemblyScript/assemblyscript.git",
     "babel-types": "^6.26.0",
     "base64-js": "^1.3.1",
-    "parcel-bundler": "^1.12.4",
+    "js-yaml": "^3.13.1",
+    "parcel": "next",
     "typescript": "^3.8.3"
   },
   "scripts": {
     "asbuild": "asc assembly/index.ts -O3 -b build/optimized.wasm --validate --sourceMap",
-    "start": "yarn asbuild && parcel index.html",
+    "start": "yarn asbuild && yarn parcel index.html",
     "test": "node tests"
   },
   "dependencies": {
