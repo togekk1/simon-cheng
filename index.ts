@@ -1,10 +1,5 @@
 import * as loader from '@assemblyscript/loader';
 (async (): Promise<void> => {
-    try {
-        const wasm = await loader.instantiateStreaming(fetch('build/optimized.wasm'), { /* imports */ })
-        console.log(wasm);
-    }
-    catch (err) {
-        console.error(err);
-    }
-})
+    const { add } = await loader.instantiateStreaming(fetch('optimized.wasm'))
+    console.log(add(1, 2), 3);
+})();

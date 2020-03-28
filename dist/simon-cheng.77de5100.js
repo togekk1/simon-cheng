@@ -700,30 +700,20 @@ var loader = __importStar(require("@assemblyscript/loader"));
 
 (function () {
   return __awaiter(void 0, void 0, Promise, function () {
-    var wasm, err_1;
+    var add;
     return __generator(this, function (_a) {
       switch (_a.label) {
         case 0:
-          _a.trys.push([0, 2,, 3]);
-
-          return [4, loader.instantiateStreaming(fetch('build/optimized.wasm'), {})];
+          return [4, loader.instantiateStreaming(fetch('optimized.wasm'))];
 
         case 1:
-          wasm = _a.sent();
-          console.log(wasm);
-          return [3, 3];
-
-        case 2:
-          err_1 = _a.sent();
-          console.error(err_1);
-          return [3, 3];
-
-        case 3:
+          add = _a.sent().add;
+          console.log(add(1, 2), 3);
           return [2];
       }
     });
   });
-});
+})();
 },{"@assemblyscript/loader":"node_modules/@assemblyscript/loader/index.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -752,7 +742,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60780" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "65114" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
