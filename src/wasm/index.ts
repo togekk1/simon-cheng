@@ -1,15 +1,20 @@
 import * as loader from '@assemblyscript/loader';
 
 interface wasm_type {
-    main: Function;
+    main: main;
     __getString: Function;
     __allocString: Function;
     click_event: Function;
 }
 
+export class main {
+    html_global: string = '';
+    constructor(_html: string) { }
+}
+
 export default class wasm {
     wasm: wasm_type = {} as wasm_type;
-    main: Function = () => { };
+    main: main;
     get_string: Function = () => { };
     alloc_string: Function = () => { };
     click_event: Function = () => { };
