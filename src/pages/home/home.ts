@@ -3,6 +3,7 @@ import wasm from '../../wasm';
 import html from './home.html';
 // @ts-ignore
 import './home.less';
+import '../../assets/fonts/stylesheet.css'
 
 export default class home {
     constructor(
