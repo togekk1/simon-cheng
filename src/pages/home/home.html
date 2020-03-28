@@ -21,7 +21,7 @@
                             [class]="{'pointer' : !prod || !disabled}" [@enter]="leave ? 'void' : 'on'"
                             (@enter.done)="!leave && disabled = false" [disabled]="prod && disabled"
                             (click)="disabled = true; leave = true; content_page_show = true">
-                            <span class="arrow" [class]="fuck">►</span>
+                            <span class="arrow">►</span>
                             <span class="enter_text">Enter</span>
                         </button>
                     </div>

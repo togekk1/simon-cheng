@@ -44,7 +44,6 @@ export class main {
               iter_arr[i] + '=\"' + split_by_semicon[0] + ':' + value + '\"'
             );
           };
-          // variables.set(iter_arr[i] + (j - 1).toString(), html_iter_arr[j].substring(0, html_iter_arr[j].indexOf('\"')))
         }
     };
     render(html);
