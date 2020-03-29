@@ -8,7 +8,9 @@ interface wasm_type {
 }
 
 export class main {
-    html_global: string = '';
+    html: number = 0;
+    prod: boolean = false;
+    disabled: boolean = false;
     constructor(_html: string) { }
 }
 
