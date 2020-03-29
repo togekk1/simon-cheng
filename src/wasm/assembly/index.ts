@@ -13,8 +13,9 @@ declare function add_event_listener(id: string): void;
 
 export class main {
   html: string = '';
-  prod: boolean = false;
+  prod: boolean = true;
   disabled: boolean = true;
+  on_enter: boolean = false;
 
   constructor() { }
 
@@ -24,6 +25,7 @@ export class main {
 
     scopes.set('prod', this.prod);
     scopes.set('disabled', this.disabled);
+    scopes.set('on_enter', this.on_enter);
 
     let html = this.html,
       html_iter_arr: string[],

@@ -9,17 +9,16 @@
 
         <div class="title">
             <div class="intro_content">
-                <div class="pre" [@pre]="leave ? 'void' : 'on'" [style]="{'opacity': prod ? '0' : '1'}">
+                <div class="pre" [class]="{'enter': on_enter}">
                     <h2>All about my journey. All about my lifestyle.</h2>
                 </div>
                 <div class="name_enter">
-                    <div class="name" [@name]="leave ? 'void' : 'on'" [style]="{'opacity': prod ? '0' : '1'}">
+                    <div class="name" [class]="{'enter': on_enter}>
                         <h1>Simon Cheng</h1>
                     </div>
-                    <div class="text-right">
+                    <div class=" text-right">
                         <button class="enter plain_button" [style]="{'opacity': prod ? '0' : '1'}"
-                            [class]="{'pointer' : !prod || !disabled}" [@enter]="leave ? 'void' : 'on'"
-                            (@enter.done)="!leave && disabled = false" [disabled]="prod && disabled"
+                            [class]="{'pointer' : !prod || !disabled}" [disabled]="prod && disabled"
                             (click)="disabled = true; leave = true; content_page_show = true">
                             <span class="arrow">►</span>
                             <span class="enter_text">Enter</span>

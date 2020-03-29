@@ -14,8 +14,12 @@ export default class home {
         main_new.html = alloc_string(html);
         main_new.render();
         setTimeout(() => {
-            main_new.prod = true;
+            main_new.on_enter = true;
             main_new.render();
-        }, 1000);
+        }, 2000);
+        setTimeout(() => {
+            main_new.disabled = false;
+            main_new.render();
+        }, 5300);
     }
 }
