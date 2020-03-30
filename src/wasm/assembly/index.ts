@@ -33,7 +33,8 @@ export class main {
       split_by_semicon: string[],
       split_by_question_mark: string[],
       value: string,
-      j: i32;
+      j: i32,
+      k: i32;
 
     for (let i = 0; i < iter_arr.length; i++) {
       html_iter_arr = html.split('[' + iter_arr[i] + ']=\"');
@@ -57,18 +58,16 @@ export class main {
             split_by_semicon = to_process.substring(2, to_process.indexOf('}')).replace('\'', '').split(':');
             const split_by_or = split_by_semicon[1].split('||');
             const boolean_arr: boolean[] = [];
-            log(split_by_or.length.toString());
-            // for (j = 0; j < split_by_or.length; j++) {
-            //   log('OK');
-            //   // check boolean
-            //   split_by_or[j] = split_by_or[j].trim();
-            //   boolean_arr[j] = split_by_or[j].includes('!') ? !scopes.get(split_by_or[j].substring(split_by_or[j].indexOf('!') + 1, split_by_or[j].length)) : scopes.get(split_by_or[j].trim().substring(0, split_by_or[j].length));
-            // }
-            // value = boolean_arr.some((boolean: boolean) => boolean) ? /* scope */split_by_semicon[0].trim() : '';
-            // const split_by_class: string[] = html.split('[' + iter_arr[i] + ']=\"' + to_process + '"')[0].split(iter_arr[i]),
-            //   class_content: string = split_by_class[split_by_class.length - 1].split('\"')[1],
-            //   split_by_class_content: string[] = html.split(class_content);
-            // html = html.replace(split_by_class_content[split_by_class_content.length - 2], split_by_class_content[split_by_class_content.length - 2] + value + ' ');
+            for (k = 0; k < split_by_or.length; k++) {
+              // check boolean
+              split_by_or[k] = split_by_or[k].trim();
+              boolean_arr[k] = split_by_or[k].includes('!') ? !scopes.get(split_by_or[k].substring(split_by_or[k].indexOf('!') + 1, split_by_or[k].length)) : scopes.get(split_by_or[k].trim().substring(0, split_by_or[k].length));
+            }
+            value = boolean_arr.some((boolean: boolean) => boolean) ? /* scope */split_by_semicon[0].trim() : '';
+            const split_by_class: string[] = html.split('[' + iter_arr[i] + ']=\"' + to_process + '"')[0].split(iter_arr[i]),
+              class_content: string = split_by_class[split_by_class.length - 1].split('\"')[1],
+              split_by_class_content: string[] = html.split(class_content);
+            html = html.replace(split_by_class_content[split_by_class_content.length - 2], split_by_class_content[split_by_class_content.length - 2] + value + ' ');
           };
         }
     };
