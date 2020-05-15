@@ -18,6 +18,7 @@
     "asbuild_dev": "asc src/wasm/assembly/index.ts -b dist/index.wasm --validate --sourceMap",
     "start": "yarn asbuild_dev && parcel src/index.html",
     "build": "del build /S /Q && yarn asbuild && parcel build src/index.html --no-source-maps --out-dir build --public-url ./",
+    "update": "yarn global upgrade --latest && yarn upgrade --latest",
     "test": "node tests"
   },
   "dependencies": {
