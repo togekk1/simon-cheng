@@ -24,7 +24,7 @@ export default class wasm {
     constructor() { }
 
     async load() {
-        const { main, __getString, __allocString, click_event }: wasm_type = await loader.instantiateStreaming(fetch('index.wasm'), {
+        const { main, __getString, __allocString, click_event }: wasm_type = (await loader.instantiateStreaming(fetch('index.wasm'), {
             env: {
                 abort(msg, file, line, column) {
                     throw Error("Assertion failed: " + (msg ? "'" + __getString(msg) + "' " : "") + "at " + __getString(file) + ":" + line + ":" + column);
@@ -42,7 +42,9 @@ export default class wasm {
                     document.getElementById(__getString(id))?.addEventListener('click', () => { click_event() })
                 }
             }
-        }) as wasm_type;
+        })).exports as wasm_type;
+        console.log(main);
+
 
         this.main = main;
         this.get_string = __getString;

@@ -14,8 +14,8 @@
     "typescript": "^3.9.2"
   },
   "scripts": {
-    "asbuild": "asc src/wasm/assembly/index.ts -O3 -b build/index.wasm --validate",
-    "asbuild_dev": "asc src/wasm/assembly/index.ts -b dist/index.wasm --validate --sourceMap",
+    "asbuild": "asc src/wasm/assembly/index.ts -O3 -b build/index.wasm",
+    "asbuild_dev": "asc src/wasm/assembly/index.ts -b dist/index.wasm --sourceMap",
     "start": "yarn asbuild_dev && parcel src/index.html",
     "build": "del build /S /Q && yarn asbuild && parcel build src/index.html --no-source-maps --out-dir build --public-url ./",
     "update": "yarn upgrade --latest",
