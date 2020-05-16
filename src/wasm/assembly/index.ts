@@ -1,13 +1,18 @@
 // The entry file of your WebAssembly module.
 
+// @ts-ignore ts(1206)
 @external("env", "logi")
 declare function logi(val: i32): void;
+// @ts-ignore ts(1206)
 @external("env", "logf")
 declare function logf(val: f64): void;
+// @ts-ignore ts(1206)
 @external("env", "log")
 declare function log(val: string): void;
+// @ts-ignore ts(1206)
 @external("env", "render")
 declare function render(html: string): void;
+// @ts-ignore ts(1206)
 @external("env", "add_event_listener")
 declare function add_event_listener(id: string): void;
 

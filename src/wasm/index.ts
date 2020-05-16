@@ -1,22 +1,28 @@
 import * as loader from '@assemblyscript/loader';
+import { ASUtil } from '@assemblyscript/loader';
 
-interface wasm_type {
+interface wasm_type extends ASUtil {
     main: main;
-    __getString: Function;
-    __allocString: Function;
     click_event: Function;
 }
 
-export class main {
-    html: number = 0;
-    prod: boolean = false;
-    disabled: boolean = false;
-    constructor(_html: string) { }
+export interface main {
+    html: number;
+    prod: boolean;
+    disabled: boolean;
+}
+
+interface env {
+    memory?: WebAssembly.Memory | undefined;
+    table?: WebAssembly.Table | undefined;
+    seed?(): number;
+    abort?(msg: number, file: number, line: number, column: number): void;
+    trace?(msg: number, numArgs?: number | undefined, ...args: number[]): void;
 }
 
 export default class wasm {
-    wasm: wasm_type = {} as wasm_type;
-    main: main;
+    wasm: ASUtil = {} as ASUtil;
+    main: main | undefined;
     get_string: Function = () => { };
     alloc_string: Function = () => { };
     click_event: Function = () => { };
@@ -41,7 +47,7 @@ export default class wasm {
                 add_event_listener(id: number): void {
                     document.getElementById(__getString(id))?.addEventListener('click', () => { click_event() })
                 }
-            }
+            } as env
         })).exports as wasm_type;
 
         this.main = main;
