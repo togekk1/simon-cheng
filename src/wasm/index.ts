@@ -43,8 +43,6 @@ export default class wasm {
                 }
             }
         })).exports as wasm_type;
-        console.log(main);
-
 
         this.main = main;
         this.get_string = __getString;
