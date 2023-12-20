@@ -17,6 +17,11 @@
     "rust-analyzer.procMacro.attributes.enable": true,
     "rust-analyzer.linkedProjects": [
         "./Cargo.toml",
+        "./Cargo.toml",
+        "./Cargo.toml",
+        "./Cargo.toml",
+        "./Cargo.toml",
+        "./Cargo.toml"
     ],
     "rust-analyzer.rustfmt.overrideCommand": [
         "/home/togekk/.cargo/bin/rustfmt",
