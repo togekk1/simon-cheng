@@ -43,7 +43,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "1ca33f4bc4ed1babef42cad36cc1f51fa88be00420404e5b1e80ab1b18f7678c"
 dependencies = [
  "concurrent-queue",
- "event-listener 4.0.0",
+ "event-listener 4.0.1",
  "event-listener-strategy",
  "futures-core",
  "pin-project-lite",
@@ -55,7 +55,7 @@ version = "3.2.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "7125e42787d53db9dd54261812ef17e937c95a51e4d291373b670342fa44310c"
 dependencies = [
- "event-listener 4.0.0",
+ "event-listener 4.0.1",
  "event-listener-strategy",
  "pin-project-lite",
 ]
@@ -212,8 +212,7 @@ dependencies = [
 [[package]]
 name = "dioxus"
 version = "0.4.3"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "2d9e3b0725e520250bf23213f996d241cca29cea4360a9bf08a44e0033f8e569"
+source = "git+https://github.com/DioxusLabs/dioxus.git#cd019db9ef89a39bf58e33064a4f32b370018acb"
 dependencies = [
  "dioxus-core",
  "dioxus-core-macro",
@@ -226,8 +225,7 @@ dependencies = [
 [[package]]
 name = "dioxus-core"
 version = "0.4.3"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "0f33186615b2e90bceab24a195b3cfad4e0b4d91a33ec44a94845876bfb25c13"
+source = "git+https://github.com/DioxusLabs/dioxus.git#cd019db9ef89a39bf58e33064a4f32b370018acb"
 dependencies = [
  "bumpalo",
  "futures-channel",
@@ -243,8 +241,7 @@ dependencies = [
 [[package]]
 name = "dioxus-core-macro"
 version = "0.4.3"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "21afaccb28587aed0ba98856335912f5ce7052c0aafa74b213829a3b8bfd2345"
+source = "git+https://github.com/DioxusLabs/dioxus.git#cd019db9ef89a39bf58e33064a4f32b370018acb"
 dependencies = [
  "constcat",
  "dioxus-core",
@@ -264,8 +261,7 @@ checksum = "2ea539174bb236e0e7dc9c12b19b88eae3cb574dedbd0252a2d43ea7e6de13e2"
 [[package]]
 name = "dioxus-hooks"
 version = "0.4.3"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "5bb23ce82df4fb13e9ddaa01d1469f1f32d683dd4636204bd0a0eaf434b65946"
+source = "git+https://github.com/DioxusLabs/dioxus.git#cd019db9ef89a39bf58e33064a4f32b370018acb"
 dependencies = [
  "dioxus-core",
  "dioxus-debug-cell",
@@ -278,8 +274,7 @@ dependencies = [
 [[package]]
 name = "dioxus-hot-reload"
 version = "0.4.3"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "b7d8c9e89e866a6b84b8ad696f0ff2f6f6563d2235eb99acc6952f19e516cc09"
+source = "git+https://github.com/DioxusLabs/dioxus.git#cd019db9ef89a39bf58e33064a4f32b370018acb"
 dependencies = [
  "dioxus-core",
  "dioxus-html",
@@ -292,8 +287,7 @@ dependencies = [
 [[package]]
 name = "dioxus-html"
 version = "0.4.3"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "828a42a2d70688a2412a8538c8b5a5eceadf68f682f899dc4455a0169db39dfd"
+source = "git+https://github.com/DioxusLabs/dioxus.git#cd019db9ef89a39bf58e33064a4f32b370018acb"
 dependencies = [
  "async-channel 1.9.0",
  "async-trait",
@@ -312,8 +306,7 @@ dependencies = [
 [[package]]
 name = "dioxus-interpreter-js"
 version = "0.4.3"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "d9a3115cf9f550a9af88de615c21a15a72dee44230602087dd7b0c5d01f46c37"
+source = "git+https://github.com/DioxusLabs/dioxus.git#cd019db9ef89a39bf58e33064a4f32b370018acb"
 dependencies = [
  "js-sys",
  "sledgehammer_bindgen",
@@ -325,8 +318,7 @@ dependencies = [
 [[package]]
 name = "dioxus-router"
 version = "0.4.3"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "25785196405afb2a6ef1b76400d06af88fdf1f8d0315779136465afcddea39a6"
+source = "git+https://github.com/DioxusLabs/dioxus.git#cd019db9ef89a39bf58e33064a4f32b370018acb"
 dependencies = [
  "anyhow",
  "dioxus",
@@ -346,8 +338,7 @@ dependencies = [
 [[package]]
 name = "dioxus-router-macro"
 version = "0.4.3"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "89c7bc30b74ce1082cf7d501ce50c5c1f0629b0c35966bca854e3e9a1d8d4f64"
+source = "git+https://github.com/DioxusLabs/dioxus.git#cd019db9ef89a39bf58e33064a4f32b370018acb"
 dependencies = [
  "proc-macro2",
  "quote",
@@ -358,20 +349,19 @@ dependencies = [
 [[package]]
 name = "dioxus-rsx"
 version = "0.4.3"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "c974133c7c95497a486d587e40449927711430b308134b9cd374b8d35eceafb3"
+source = "git+https://github.com/DioxusLabs/dioxus.git#cd019db9ef89a39bf58e33064a4f32b370018acb"
 dependencies = [
  "dioxus-core",
  "proc-macro2",
  "quote",
  "syn",
+ "tracing",
 ]
 
 [[package]]
 name = "dioxus-web"
 version = "0.4.3"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "fafaff75f50035078c2da45441ee61472fd0f335fa15b05170165eaf3479f0df"
+source = "git+https://github.com/DioxusLabs/dioxus.git#cd019db9ef89a39bf58e33064a4f32b370018acb"
 dependencies = [
  "async-channel 1.9.0",
  "async-trait",
@@ -431,9 +421,9 @@ checksum = "0206175f82b8d6bf6652ff7d71a1e27fd2e4efde587fd368662814d6ec1d9ce0"
 
 [[package]]
 name = "event-listener"
-version = "4.0.0"
+version = "4.0.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "770d968249b5d99410d61f5bf89057f3199a077a04d087092f58e7d10692baae"
+checksum = "84f2cdcf274580f2d63697192d744727b3198894b1bf02923643bf59e2c26712"
 dependencies = [
  "concurrent-queue",
  "parking",
@@ -446,7 +436,7 @@ version = "0.4.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "958e4d70b6d5e81971bebec42271ec641e7ff4e170a6fa605f2b8a8b65cb97d3"
 dependencies = [
- "event-listener 4.0.0",
+ "event-listener 4.0.1",
  "pin-project-lite",
 ]
 
