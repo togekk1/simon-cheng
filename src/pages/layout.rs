@@ -10,7 +10,7 @@ pub struct TitleProps<'a> {
 #[allow(non_snake_case)]
 pub fn Layout<'a>(cx: Scope<'a, TitleProps<'a>>) -> Element {
     cx.render(rsx! {
-        div { class: "bg-black h-screen bg-[url('img/IMG_20230423_150135_HDR.jpg')] bg-cover pt-16",
+        div { class: "bg-black h-screen bg-[url('img/home-bg.avif')] bg-cover bg-center pt-16",
             crate::components::title::Title { title: cx.props.title }
         }
     })
